@@ -1,34 +1,33 @@
-<link rel="stylesheet" href="/static/style.css" type="text/css">
-{% block body %}
-{% if session['logged_in'] %}
-<p>You're logged in already!</p>
-{% else %}
- 
- 
-<form action="/login" method="POST">
-    <div class="login">
-        <div class="login-screen">
-            <div class="app-title">
-                <h1>Login</h1>
-            </div>
- 
-            <div class="login-form">
-                <div class="control-group">
-                <input type="text" class="login-field" value="" placeholder="username" name="username">
-                <label class="login-field-icon fui-user" for="login-name"></label>
-                </div>
- 
-                <div class="control-group">
-                <input type="password" class="login-field" value="" placeholder="password" name="password">
-                <label class="login-field-icon fui-lock" for="login-pass"></label>
-                </div>
- 
-                <input type="submit" value="Log in" class="btn btn-primary btn-large btn-block" >
-                <br>
-            </div>
-        </div>
-    </div>
-</form>
- 
-{% endif %}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>ERP Solution</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{url_for('static', filename='css/style.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form">
+      <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/>
+      <a href="{{url_for('profile')}}">login</a>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+  </div>
+</div>
+</body>
+</html>

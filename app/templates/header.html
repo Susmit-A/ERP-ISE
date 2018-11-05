@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>ERP Solution</title>
+
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+   <!-- Style sheets-->
+   <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{url_for('static', filename='css/style.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ </head>
+ <body>
+     <header>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ERP Solution</a>
+
+      <ul class="right hide-on-med-and-down">
+        <li>
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+        </li>
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <!--Side Navigation bar-->
+  <ul id="slide-out" class="sidenav sidenav-fixed">
+    <li class="center"><div class="user-view">
+      <div class="background">
+        <img src="{{url_for('static', filename='images/nav-back.jpg')}}">
+      </div>
+      <a href="#user"><img class="circle" src="{{url_for('static', filename='images/yash.jpg')}}" style="width: 100px; height: 100px;margin: auto;"></a>
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a class="waves-effect" href="{{url_for('profile')}}"><i class="material-icons">person</i>My Profile</a></li>
+    <li><a class="waves-effect" href="{{url_for('department')}}"><i class="material-icons">group</i>Departments <span class="badge">13</span></a></li>
+    <!--<li><a href="#!">Second Link</a></li>-->
+    <li><a class="waves-effect" href="#!"><i class="material-icons">book</i>Attendance</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons">thumb_up</i>Marks</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons">feedback</i>Feedback</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons">offline_bolt</i>Extras</a></li>
+  </ul>
+  </header>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
