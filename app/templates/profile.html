@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>ERP Solution</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{url_for('static', filename='css/style.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  {%extends "header.html" %}
+  {% block content%}
+
+  <main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center orange-text">Student Details</h1>
+      <!--<div class="row center">
+        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+      </div>
+      <div class="row center">
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+      </div>-->
+    </div>
+     <div class="row">
+      <div class="col m12 s12">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <div class="row">
+              <div class="col m6 s12">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><b>First Name<b></td>
+                      <td>Sneh</td>
+                    </tr>
+                    <tr>
+                      <td><b>Last Name</b></td>
+                      <td>Shekhar</td>
+                    </tr>
+                    <tr>
+                      <td><b>ISE</b></td>
+                      <td>1MV16IS053</td>
+                    </tr>
+                    <tr>
+                      <td><b>Year</b></td>
+                      <td>III</td>
+                    </tr>
+                    <tr>
+                      <td><b>Date Of Birth</b></td>
+                      <td>12/12/1998</td>
+                    </tr>
+                    <tr>
+                      <td><b>Gender</b></td>
+                      <td>Male</td>
+                    </tr>
+                    <tr>
+                      <td><b>Blood Group</b></td>
+                      <td>O+</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col m6 s12">
+                <table>
+                   <tbody>
+                    <tr>
+                      <td><b>Phone Number<b></td>
+                      <td>+91-9886196700</td>
+                    </tr>
+                    <tr>
+                      <td><b>Email</b></td>
+                      <td>sneh_shekhar2k@yahoo.in</td>
+                    </tr>
+                    <tr>
+                      <td><b>Guardian Name</b></td>
+                      <td>Nishi Shekhar</td>
+                    </tr>
+                    <tr>
+                      <td><b>Guardian Contact</b></td>
+                      <td>+91-9886196700</td>
+                    </tr>
+                    <tr>
+                      <td><b>Permanent Address</b>></td>
+                      <td>Flat #C3,Shraddha Maple Manor,Koromangala, Bangalore-560103</td>
+                    </tr>
+                    <tr>
+                      <td><b>Local Address</b></td>
+                      <td>Villa #73, Pushpam Woods, Sarjapur, Bangalore-560103</td>
+                    </tr>
+                    <tr>
+                      <td><b>Extras</b></td>
+                      <td>Android Application Development Internship</td>
+                    <tr>
+                      <td><b>Local Guardian</b></td>
+                      <td><li><a href="#">Mrs. Smitha Patil</a></li></td>
+                    </tr>
+                    <tr>
+                      <td><b>Certificates</b></td>
+                      <td>Please make this as a pdf</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><a href="#"><i class="fa fa-linkedin"></i></a></h2>
+            <h5 class="center">LinkedIn</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+  </main>
+  {% include "footer.html" %}
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{url_for('static', filename='js/materialize.js')}}"></script>
+  <script src="{{url_for('static', filename='js/init.js')}}"></script>
+  {% endblock %}
+  </body>
+</html>
